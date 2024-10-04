@@ -1,4 +1,7 @@
 package ga.banga.restapi;
 
-public record Utilisateur(Long id, String nom, String prenom) {
+
+import org.springframework.data.annotation.Id;
+
+public record Utilisateur(@Id Long id, String nom, String prenom) {
 }
