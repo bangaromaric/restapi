@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UtilisateurController {
     @GetMapping("/utilisateurs/{id}")
-    private ResponseEntity<Utilisateur> findById(@PathVariable Long requestedId) {
-        Utilisateur cashCard = new Utilisateur();
-        return ResponseEntity.ok(cashCard);
+    private ResponseEntity<Utilisateur> findById(@PathVariable Long id) {
+        Utilisateur utilisateur = new Utilisateur(id,"KOUMBA", "KOUMBA");
+        return ResponseEntity.ok(utilisateur);
     }
 }
